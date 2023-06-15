@@ -16,7 +16,7 @@ thesis-project
 │   .gitignore
 │   LICENSE
 │   README.md
-│   requirements.tx
+│   requirements.txt
 ```
 
 # To Do
