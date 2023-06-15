@@ -1,23 +1,13 @@
 # Hateful-Memes-Detection
 This repository contains all code that has been used for my thesis project. The project aims to explore the impact of data augmentation, feature extraction by image captioning, text encoder selection, and ensemble learning on hateful meme detection.
 
-# Project structure
+# Preparation before reproducing all codes
 
-```
-thesis-project
-└───data
-│       │   sample_data.csv 
-└───results
-│       │   sample_results.png 
-└───src
-│   └───utils
-│       │   plotting.py
-│   │   main.py
-│   .gitignore
-│   LICENSE
-│   README.md
-│   requirements.txt
-```
+## Data 
+The dataset used for my thesis project is the Facebook Hateful Memes Dataset, which is the largest annotated memes dataset that contains more than 10K memes with gold labels. Since the dataset contains some offensive and distasteful memes that may be disturbing to some people, Facebook AI Research strictly restrict the dissemination of this dataset. Anyone who wants to use this dataset for academic research must fill out a form and agree to the dataset license agreement on this website: https://hatefulmemeschallenge.com/#download
+
+## Environment Setting
+All code experiments were performed using Nvidia A100 GPU provided by Google Colaboratory Pro+ (Colab Pro+). If you want to reproduce my code in Google Colaboratory without changing any file paths, please upload the dataset you downloaded (hateful_memes.zip) along with my code to your Google Drive root directory and then run my code step by step in Google Colaboratory.
 
 # To Do
 Once you start, please go through the following steps to tailor this template to your project
@@ -25,18 +15,6 @@ Once you start, please go through the following steps to tailor this template to
 ## Thesis report
 You may decide to upload your report here directly, or to simply add a reference to where the report is hosted (e.g. Overleaf)
 - [ ] Add a reference to the thesis report
-
-## Data 
-To ensure reproducibility, Yu need to provide the data your project uses.
-- [ ] Add your data in the data folder
-
-Sometimes, sharing sharing data is not straightforward. For example, there may be restrictions regarding with whom or how you can share the data you have. Some other times, the data you are using is open and easily accessible from other sites, in which case you might want to point directly to the original source. Either way, if this is the case for you please 
-- [ ] Add the data folder to ``.gitignore`` in order to avoid commiting these files to Github. For this you can simply uncomment the last line in the ``.gitignore`` file  
-```
-# Tailored ignored files
-data/*
-```
-- [ ] Make sure to add a ``README.md`` file inside the data folder, where you explain in detail how to obtain and structure the data
 
 ## README
 - [ ] Add instructions on how to set up the project, how to run your code and what to expect as an output.
