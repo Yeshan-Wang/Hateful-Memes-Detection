@@ -1,5 +1,5 @@
 # Hateful-Memes-Detection
-This repository contains all code that has been used for my Master's Thesis on Hateful Memes Detection.
+This repository contains all code that has been used for my thesis project. The project aims to explore the impact of data augmentation, feature extraction by image captioning, text encoder selection, and ensemble learning on hateful meme detection.
 
 # Overview
 This repository assumes a Python project, with an Open License (MIT style). If any of these aspects are different from your project please make sure to change those accordingly.
