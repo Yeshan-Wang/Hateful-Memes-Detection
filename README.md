@@ -8,13 +8,3 @@ The dataset used for my thesis project is the Facebook Hateful Memes Dataset, wh
 
 ## Environment Setting
 All code experiments were performed using Nvidia A100 GPU provided by Google Colaboratory Pro+ (Colab Pro+). If you want to reproduce my code in Google Colaboratory without changing any file paths, please upload the dataset you downloaded (hateful_memes.zip) along with my code to your Google Drive root directory and then run my code step by step in Google Colaboratory. If you want to run my code locally, please change all of the file paths in my code to your local file paths and install all required packages from the requirements.txt file. (Make sure you are working with Python 3.10.12)
-
-# To Do
-Once you start, please go through the following steps to tailor this template to your project
-
-## Thesis report
-You may decide to upload your report here directly, or to simply add a reference to where the report is hosted (e.g. Overleaf)
-- [ ] Add a reference to the thesis report
-
-## README
-- [ ] Add instructions on how to set up the project, how to run your code and what to expect as an output.
