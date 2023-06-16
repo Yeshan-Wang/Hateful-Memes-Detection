@@ -12,7 +12,7 @@ All code experiments were performed using Nvidia A100 GPU provided by Google Col
 # Reproducing all codes
 **All codes/notebooks should be run in the following order:**
 
-## 1. Exploratory Data Analysis.ipynb  [![Open In Colab](https://drive.google.com/file/d/17zDK84NRg_9ZNYcrgdYeZE6CibihY-Bq/view?usp=sharing)]
+## 1. Exploratory Data Analysis.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/17zDK84NRg_9ZNYcrgdYeZE6CibihY-Bq/view?usp=sharing)
 The notebook performs exploratory data analysis on the Facebook Hateful Memes Dataset (especially the training set) in the following parts:
 - Label-distribution of hateful/non-hateful for each dataset
 - Exploring the internal structure of the dataset and some hateful/non-hateful samples in training set
