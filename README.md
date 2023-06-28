@@ -35,12 +35,7 @@ The notebook performs exploratory data analysis on the Facebook Hateful Memes Da
 
 ## 2. CLIP Model  
 The folder contains the following four notebooks corresponding to the complete experiments for four different CLIP models. We can compare the four models in the following table:  
-- CLIP(ViT-B/32).ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1js683AnC-r0dlxn7khlDZV7C6rclCOhN)
-- CLIP(ViT-B/16).ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MzbgFUcyMI_zrtFwCWVTfbVXFOV3cHxM)
-- CLIP(ViT-L/14).ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IEwz53Dn4qmE3R3WngCtYyIKzOPX77JG)
-- CLIP(ViT-L/14@336px).ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It)  
-
-We can compare the four models in the following table:  
+ 
 |   Model Name   | Validation AUROC | Test AUROC |  Model Size  |  Time Cost of Encoding  |  Colab Links  |
 | -------------- | ---------------- | ---------- | ------------ | ----------------------- | ------------- |
 | ViT-L/14@336px |      81.13       |   83.81    |    891MB     |          3:10           | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
