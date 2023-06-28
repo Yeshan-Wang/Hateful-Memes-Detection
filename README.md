@@ -14,7 +14,7 @@ The evaluation metric used to report the performance of the multimodal classific
 
 |    Model     |  Validation AUROC  |  Test AUROC  |      Reference      |
 | ------------ | ------------------ | ------------ | ------------------- |
-| DisMultiHate |        82.8        |  Not given   | ACM Multimedia 2021 [Lee, Roy Ka-Wei, et al](https://dl.acm.org/doi/10.1145/3474085.3475625) |
+| DisMultiHate |        82.8        |  Not given   | ACM Multimedia 2021 [[Lee, Roy Ka-Wei, et al](https://dl.acm.org/doi/10.1145/3474085.3475625)] |
 | Hate-CLIPper |        81.55       |    85.8      | EMNLP 2022 Workshop |
 |  PromptHate  |        81.45       |  Not given   |      EMNLP 2022     |
 |   MemeFier   |        80.1        |  Not given   |       ICMR 2023     |
