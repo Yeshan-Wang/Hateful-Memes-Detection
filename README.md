@@ -41,9 +41,9 @@ The folder contains the following four notebooks corresponding to the complete e
 - CLIP(ViT-L/14@336px).ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It)  
 
 We can compare the four models in the following table:  
-|   Model Name   |  AUROC  |  Model Size  |  Time Cost of Encoding  |
-| -------------- | ------- | ------------ | ----------------------- |
-| ViT-L/14@336px |  83.81  |    891MB     |          3:10           |
-|    ViT-L/14    |  82.41  |    890MB     |          2:46           |
-|    ViT-B/16    |  79.94  |    335MB     |          2:32           |
-|    ViT-B/32    |  76.89  |    338MB     |          2:28           |
+|   Model Name   | Validation AUROC | Test AUROC |  Model Size  |  Time Cost of Encoding  |
+| -------------- | ---------------- | ---------- | ------------ | ----------------------- |
+| ViT-L/14@336px |      81.13       |   83.81    |    891MB     |          3:10           |
+|    ViT-L/14    |      81.62       |   82.41    |    890MB     |          2:46           |
+|    ViT-B/16    |      74.29       |   79.94    |    335MB     |          2:32           |
+|    ViT-B/32    |      73.04       |   76.89    |    338MB     |          2:28           |
