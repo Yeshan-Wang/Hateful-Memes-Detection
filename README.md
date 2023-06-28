@@ -20,7 +20,6 @@ The evaluation metric used to report the performance of the multimodal classific
 |   MemeFier   |        80.1        |  Not given   | [ACM ICMR 2023](https://dl.acm.org/doi/abs/10.1145/3591106.3592254) |
 |     CDKT     |        79.89       |    83.74     | [ACM Multimedia 2022](https://dl.acm.org/doi/abs/10.1145/3503161.3548255) |
 |     CES      |        78.29       |    78.9      | [EMNLP 2021](https://aclanthology.org/2021.emnlp-main.738/) |
-|    TRICAN    |        78.27       |    79.81     | [IEEE IJCNN 2022](https://ieeexplore.ieee.org/abstract/document/9892164) |
 
 # Reproducing all codes
 **All codes/notebooks should be run in the following order:**
