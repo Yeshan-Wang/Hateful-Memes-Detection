@@ -9,7 +9,7 @@ The dataset used for my thesis project is the Facebook Hateful Memes Dataset, wh
 ## Environment Setting
 All code experiments were performed using Nvidia A100 GPU provided by Google Colaboratory Pro+ (Colab Pro+). If you want to reproduce my code in Google Colaboratory without changing any file paths, please upload the dataset you downloaded (hateful_memes.zip) along with my code to your Google Drive root directory and then run my code step by step in Google Colaboratory. If you want to run my code locally, please change all of the file paths in my code to your local file paths and install all required packages from the requirements.txt file. (Make sure to work with Python 3.10.12)
 
-## Evaluation metric and Current Benchmark
+## Evaluation Metric and Current Benchmark
 The evaluation metric used to report the performance of the multimodal classification model is the Area Under the Receiver Operating Characteristics curve (AUROC) on validation set (dev_seen) and test set (test_seen). According to the [Hateful Memes Challenge Report](https://ai.facebook.com/blog/hateful-memes-challenge-and-data-set/) provided by Meta AI, the performance of trained annotators on the test set is 82.65. We recorded the outstanding performance of various SOTA models published from various top conferences in NLP/Multimedia in the last three years. The detailed statistics are shown in the table below:
 
 |    Model     |  Validation AUROC  |  Test AUROC  |     Publication     |
