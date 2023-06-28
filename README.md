@@ -1,5 +1,5 @@
 # Hateful-Memes-Detection
-This repository contains all code that has been used for my thesis project. The project aims to explore the impact of data augmentation, feature extraction by image captioning, text encoder selection, and ensemble learning on hateful meme detection.
+This repository contains all code that has been used for my thesis project. The project aims to explore the impact of data augmentation, feature extraction by image captioning, text encoder selection, and ensemble learning on hateful meme detection, and build a State-of-the-Art multimodal hateful memes classification system based on CLIP model.
 
 # Getting started: Preparation before reproducing all codes
 
@@ -8,6 +8,19 @@ The dataset used for my thesis project is the Facebook Hateful Memes Dataset, wh
 
 ## Environment Setting
 All code experiments were performed using Nvidia A100 GPU provided by Google Colaboratory Pro+ (Colab Pro+). If you want to reproduce my code in Google Colaboratory without changing any file paths, please upload the dataset you downloaded (hateful_memes.zip) along with my code to your Google Drive root directory and then run my code step by step in Google Colaboratory. If you want to run my code locally, please change all of the file paths in my code to your local file paths and install all required packages from the requirements.txt file. (Make sure to work with Python 3.10.12)
+
+## Evaluation metric and Current Benchmark
+The evaluation metric used to report the performance of the multimodal classification model is the Area Under the Receiver Operating Characteristics curve (AUROC) on validation set (dev_seen) and test set (test_seen). According to the report provided by Meta AI, the performance of trained annotators on the test set is 82.65. We recorded the outstanding performance of various SOTA models on this dataset in the last three years at various top conferences in NLP/Multimedia. The detailed statistics are shown in the table below:
+
+|    Model     |  Validation AUROC  |  Test AUROC  |      Reference      |
+| ------------ | ------------------ | ------------ | ------------------- |
+| DisMultiHate |        82.8        |  Not given   | ACM Multimedia 2021 [Lee, Roy Ka-Wei, et al](https://dl.acm.org/doi/10.1145/3474085.3475625) |
+| Hate-CLIPper |        81.55       |    85.8      | EMNLP 2022 Workshop |
+|  PromptHate  |        81.45       |  Not given   |      EMNLP 2022     |
+|   MemeFier   |        80.1        |  Not given   |       ICMR 2023     |
+|     CDKT     |        79.89       |    83.74     | ACM Multimedia 2022 |
+|     CES      |        78.29       |    78.9      |      EMNLP 2021     |
+|    TRICAN    |        78.27       |    79.81     |   IEEE IJCNN 2022   |
 
 # Reproducing all codes
 **All codes/notebooks should be run in the following order:**
