@@ -12,7 +12,7 @@ All code experiments were performed using Nvidia A100 GPU provided by Google Col
 ## Evaluation metric and Current Benchmark
 The evaluation metric used to report the performance of the multimodal classification model is the Area Under the Receiver Operating Characteristics curve (AUROC) on validation set (dev_seen) and test set (test_seen). According to the report provided by Meta AI, the performance of trained annotators on the test set is 82.65. We recorded the outstanding performance of various SOTA models on this dataset in the last three years at various top conferences in NLP/Multimedia. The detailed statistics are shown in the table below:
 
-|    Model     |  Validation AUROC  |  Test AUROC  |      Reference      |
+|    Model     |  Validation AUROC  |  Test AUROC  |     Publication     |
 | ------------ | ------------------ | ------------ | ------------------- |
 | DisMultiHate |        82.8        |  Not given   | [ACM Multimedia 2021](https://dl.acm.org/doi/10.1145/3474085.3475625) |
 | Hate-CLIPper |        81.55       |    85.8      | [EMNLP 2022 Workshop](https://aclanthology.org/2022.nlp4pi-1.20/) |
