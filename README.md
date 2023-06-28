@@ -14,10 +14,10 @@ The evaluation metric used to report the performance of the multimodal classific
 
 |    Model     |  Validation AUROC  |  Test AUROC  |     Publication     |
 | ------------ | ------------------ | ------------ | ------------------- |
-| DisMultiHate |        82.8        |  Not given   | [ACM Multimedia 2021](https://dl.acm.org/doi/10.1145/3474085.3475625) |
+| DisMultiHate |        82.8        |  not given   | [ACM Multimedia 2021](https://dl.acm.org/doi/10.1145/3474085.3475625) |
 | Hate-CLIPper |        81.55       |    85.8      | [EMNLP 2022 NLP4PI Workshop](https://aclanthology.org/2022.nlp4pi-1.20/) |
-|  PromptHate  |        81.45       |  Not given   | [EMNLP 2022](https://aclanthology.org/2022.emnlp-main.22/) |
-|   MemeFier   |        80.1        |  Not given   | [ACM ICMR 2023](https://dl.acm.org/doi/abs/10.1145/3591106.3592254) |
+|  PromptHate  |        81.45       |  not given   | [EMNLP 2022](https://aclanthology.org/2022.emnlp-main.22/) |
+|   MemeFier   |        80.1        |  not given   | [ACM ICMR 2023](https://dl.acm.org/doi/abs/10.1145/3591106.3592254) |
 |     CDKT     |        79.89       |    83.74     | [ACM Multimedia 2022](https://dl.acm.org/doi/abs/10.1145/3503161.3548255) |
 |     CES      |        78.29       |    78.9      | [EMNLP 2021](https://aclanthology.org/2021.emnlp-main.738/) |
 
