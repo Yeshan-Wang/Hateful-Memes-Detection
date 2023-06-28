@@ -30,7 +30,7 @@ The folder contains the following four notebooks corresponding to the complete e
 
 We can compare the four models in the following table:  
 |   Model Name   |  AUROC  |  Model Size  |  Time Cost of Encoding  |
-|:--------------:|:------ :|:------------:|:-----------------------:|
+| -------------- | ------- | ------------ | ----------------------- |
 | ViT-L/14@336px |  83.81  |    891MB     |          3:10           |
 |    ViT-L/14    |  82.41  |    890MB     |          2:46           |
 |    ViT-B/16    |  79.94  |    335MB     |          2:32           |
