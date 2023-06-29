@@ -36,9 +36,9 @@ The notebook performs exploratory data analysis on the Facebook Hateful Memes Da
 ## 2. CLIP Model  
 The folder contains the following four notebooks corresponding to the complete experiments for four different CLIP models. We can compare the four models in the following table:  
  
-|   Model Name   | Validation AUROC | Test AUROC |  Model Size  |  Time Cost of Encoding  |  Colab Links  |
-| -------------- | ---------------- | ---------- | ------------ | ----------------------- | ------------- |
-| ViT-L/14@336px |      81.13       |   83.81    |    891MB     |          3:10           | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
-|    ViT-L/14    |      81.62       |   82.41    |    890MB     |          2:46           | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IEwz53Dn4qmE3R3WngCtYyIKzOPX77JG) |
-|    ViT-B/16    |      74.29       |   79.94    |    335MB     |          2:32           | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MzbgFUcyMI_zrtFwCWVTfbVXFOV3cHxM) |
-|    ViT-B/32    |      73.04       |   76.89    |    338MB     |          2:28           | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1js683AnC-r0dlxn7khlDZV7C6rclCOhN) |
+|   Model Name   | Validation AUROC | Test AUROC |  Model Size  |  Colab Links  |
+| -------------- | ---------------- | ---------- | ------------ | ------------- |
+| ViT-L/14@336px |      81.13       |   83.81    |    891MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
+|    ViT-L/14    |      81.62       |   82.41    |    890MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IEwz53Dn4qmE3R3WngCtYyIKzOPX77JG) |
+|    ViT-B/16    |      74.29       |   79.94    |    335MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MzbgFUcyMI_zrtFwCWVTfbVXFOV3cHxM) |
+|    ViT-B/32    |      73.04       |   76.89    |    338MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1js683AnC-r0dlxn7khlDZV7C6rclCOhN) |
