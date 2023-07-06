@@ -46,10 +46,28 @@ The folder contains the following four notebooks corresponding to the complete e
 After comparison, we find that the CLIP model of ViT-L/14@336px version achieves the highest test AUROC (83.81), so we will perform further experiments based on this version of model.  
 
 ## 3. Replacing text encoder to RoBERTa  
-The folder contains the complete experiments for replacing the underlying text encoders of CLIP models to RoBERTa. Specifically, we tried two different versions of the pretrained RoBERTa model. The first is the RoBERTa-Large model from the HuggingFace Transformers library. The second is a roBERTa-base model trained on ~58M tweets and finetuned for offensive language identification with the TweetEval benchmark.  
+The folder contains the complete experiments for replacing the underlying text encoder of CLIP models to RoBERTa. Specifically, we tried two different versions of the pretrained RoBERTa model. The first is the RoBERTa-Large model from the HuggingFace Transformers library. The second is a RoBERTa-base model trained on ~58M tweets and finetuned for offensive language identification with the TweetEval benchmark.  
 
 | Text Encoder | Validation AUROC | Test AUROC |  Colab Links  |
 | ------------ | ---------------- | ---------- | ------------- |
 | [RoBERTa-Large](https://huggingface.co/roberta-large) | 76.62 | 80.92 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1vd3M0wQct6gG8qhQ7O5uSa7f3WaeWBGV) |
 | [Twitter-RoBERTa-base-offensive](https://huggingface.co/cardiffnlp/twitter-roberta-base-offensive) | 78.02 | 82.11 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Vi6nKfbU5f5cNj_AZhQrml5JiM71U6BE) |
+| CLIP | 81.13 | 83.81 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
+
+It is not difficult to see that replacing the underlying text encoder of the CLIP model with RoBERTa-Large will lead to a decrease in the classification performance of the CLIP model. Although the RoBERTa-base model trained and fine-tuned on specific domains outperforms RoBERTa-Large model, it is still not enough to compete with the original text encoder of CLIP.
+
+## 4. Text Augmentation.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PN4PpQiRz8gcJ8Ah42yNfPJ-25i23Hb6)  
+[Fini, Enrico, et al 2023](https://arxiv.org/abs/2305.08675) showed that a simple CLIP baseline can be substantially improved by applying text augmentation strategy. Based on this idea, we randomly select 50% of the memes from the original training set and use the data augmentation tool [AugLy](https://github.com/facebookresearch/AugLy) to replace some characters of original meme texts with random character noise that do not alter semantic. The newly created meme combinations are added to the original training set. Here's an example of original text vs augmented text for a given meme:
+
+| img | label | text |
+| --- | ----- | ---- |
+| img/18362.png	 | 0 | if they don't like it here they can leave! |
+| img/18362.png	 | 0 | Ίf Ŧhey don't lίke Īt her£ τhey caŉ leavĖ! |
+
+The following results showed that the CLIP model can be substantially improved by applying text augmentation strategy.
+
+| Model | Validation AUROC | Test AUROC |  Colab Links  |
+| ------------ | ---------------- | ---------- | ------------- |
+| CLIP+Text Augmentation | 81.03 | 84.58 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PN4PpQiRz8gcJ8Ah42yNfPJ-25i23Hb6) |
+| CLIP | 81.13 | 83.81 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
 
