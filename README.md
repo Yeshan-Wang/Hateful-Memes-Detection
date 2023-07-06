@@ -56,7 +56,7 @@ The folder contains the complete experiments for replacing the underlying text e
 
 It is not difficult to see that replacing the underlying text encoder of the CLIP model with RoBERTa-Large will lead to a decrease in the classification performance of the CLIP model. Although the RoBERTa-base model trained and fine-tuned on specific domains outperforms RoBERTa-Large model, it is still not enough to compete with the original text encoder of CLIP.
 
-## 4. Text Augmentation.ipynb  
+## 4. Text Augmentation.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PN4PpQiRz8gcJ8Ah42yNfPJ-25i23Hb6)
 We randomly select 50% of the memes from the original training set and use the data augmentation tool [AugLy](https://github.com/facebookresearch/AugLy) to replace some characters of original meme texts with random character noise that do not alter semantic. The newly created meme combinations are added to the original training set. Here's an example of original text vs augmented text for a given meme:  
 
 | img | label | text |
@@ -66,8 +66,8 @@ We randomly select 50% of the memes from the original training set and use the d
 
 The test score of AUROC showed that the CLIP model can be improved by applying text augmentation strategy.
 
-| Model | Validation AUROC | Test AUROC |  Colab Links  |
-| ------------ | ---------------- | ---------- | ------------- |
-| CLIP+Text Augmentation | 81.03 | 84.58 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PN4PpQiRz8gcJ8Ah42yNfPJ-25i23Hb6) |
-| CLIP | 81.13 | 83.81 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
+| Model | Validation AUROC | Test AUROC |
+| ------------ | ---------------- | ---------- |
+| CLIP+Text Augmentation | 81.03 | 84.58 |
+| CLIP | 81.13 | 83.81 |
 
