@@ -77,5 +77,5 @@ This folder contains the following subfiles:
 Perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction.
 ### ClipCap/Generate Captions For Memes.ipynb
 Apply a pre-trained image captioning model [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) to generate textual description of clean images. The generated captions will be saved as ClipCap_caption.csv file for the next step of the experiment.
-### ClipCap/Feed image captioning features to CLIP model.ipynb
+### ClipCap/CLIP model.ipynb
 Integrate image captioning features into additional textual inputs of the CLIP model for hateful memes classification.
