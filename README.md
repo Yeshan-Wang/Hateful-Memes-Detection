@@ -34,11 +34,22 @@ The notebook performs exploratory data analysis on the Facebook Hateful Memes Da
 - Exploring the most mentioned entities of hateful/non-hateful memes in training set
 
 ## 2. CLIP Model  
-The folder contains the following four notebooks corresponding to the complete experiments for four different CLIP models. We can compare the four models in the following table:  
+The folder contains the following four notebooks corresponding to the complete experiments for four different versions of CLIP models. We can compare the four models in the following table:  
  
-|   Model Name   | Validation AUROC | Test AUROC |  Model Size  |  Colab Links  |
+| Model Version  | Validation AUROC | Test AUROC |  Model Size  |  Colab Links  |
 | -------------- | ---------------- | ---------- | ------------ | ------------- |
 | ViT-L/14@336px |      81.13       |   83.81    |    891MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
 |    ViT-L/14    |      81.62       |   82.41    |    890MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IEwz53Dn4qmE3R3WngCtYyIKzOPX77JG) |
 |    ViT-B/16    |      74.29       |   79.94    |    335MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MzbgFUcyMI_zrtFwCWVTfbVXFOV3cHxM) |
 |    ViT-B/32    |      73.04       |   76.89    |    338MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1js683AnC-r0dlxn7khlDZV7C6rclCOhN) |
+
+After comparison, we find that the CLIP model of ViT-L/14@336px version achieves the highest test AUROC (83.81), so we will perform further experiments based on this version of model.  
+
+## 3. Replacing text encoder to RoBERTa  
+The folder contains the complete experiments for replacing the underlying text encoders of CLIP models to RoBERTa. Specifically, we tried two different versions of the pretrained RoBERTa model. The first is the RoBERTa-Large model from the HuggingFace Transformers library. The second is a roBERTa-base model trained on ~58M tweets and finetuned for offensive language identification with the TweetEval benchmark.  
+
+| Text Encoder | Validation AUROC | Test AUROC |  Colab Links  |
+| ------------ | ---------------- | ---------- | ------------- |
+| [RoBERTa-Large](https://huggingface.co/roberta-large) | 76.62 | 80.92 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1vd3M0wQct6gG8qhQ7O5uSa7f3WaeWBGV) |
+| [Twitter-RoBERTa-base-offensive](https://huggingface.co/cardiffnlp/twitter-roberta-base-offensive) | 78.02 | 82.11 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Vi6nKfbU5f5cNj_AZhQrml5JiM71U6BE) |
+
