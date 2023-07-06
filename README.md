@@ -57,7 +57,7 @@ The folder contains the complete experiments for replacing the underlying text e
 It is not difficult to see that replacing the underlying text encoder of the CLIP model with RoBERTa-Large will lead to a decrease in the classification performance of the CLIP model. Although the RoBERTa-base model trained and fine-tuned on specific domains outperforms RoBERTa-Large model, it is still not enough to compete with the original text encoder of CLIP.
 
 ## 4. Text Augmentation.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1PN4PpQiRz8gcJ8Ah42yNfPJ-25i23Hb6)
-We randomly select 50% of the memes from the original training set and use the data augmentation tool [AugLy](https://github.com/facebookresearch/AugLy) to replace some characters of original meme texts with random character noise that do not alter semantic. The newly created meme combinations are added to the original training set. Here's an example of original text vs augmented text for a given meme:  
+Randomly select 50% of the memes from the original training set and use the data augmentation tool [AugLy](https://github.com/facebookresearch/AugLy) to replace some characters of original meme texts with random character noise that do not alter semantic. The newly created meme combinations are added to the original training set. Here's an example of original text vs augmented text for a given meme:  
 
 | img | label | text |
 | --- | ----- | ---- |
@@ -71,3 +71,11 @@ The test score of AUROC showed that the CLIP model can be improved by applying t
 | CLIP+Text Augmentation | 81.03 | 84.58 |
 | CLIP | 81.13 | 83.81 |
 
+## 5. Feature Extraction by Image Captioning
+This folder contains the following subfiles:  
+### Image Processing/Remove Text from Memes.ipynb
+Perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction.
+### ClipCap/Generate Captions For Memes.ipynb
+Apply a pre-trained image captioning model [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) to generate textual description of clean images. The generated captions will be saved as ClipCap_caption.csv file for the next step of the experiment.
+### ClipCap/Feed image captioning features to CLIP model.ipynb
+Integrate image captioning features into additional textual inputs of the CLIP model for hateful memes classification.
