@@ -73,6 +73,9 @@ The test score of AUROC showed that the CLIP model can be improved by applying t
 
 ## 5. Feature Extraction by Image Captioning
 This folder contains the following subfiles:  
-- **Image Processing/Remove Text from Memes.ipynb**: Perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction.  
-- **ClipCap/Generate Captions For Memes.ipynb**: Apply a pre-trained image captioning model [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) to generate textual description of clean images. The generated captions will be saved as clipcap_caption.csv file for the next step of the experiment.
-- **ClipCap/CLIP Model.ipynb**: Integrate image captioning features from clipcap_caption.csv as additional textual inputs of the CLIP model for hateful memes classification.
+### Image Processing/Remove Text from Memes.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YaXmEBI2MPxAS7B6EoqdLVjgfxpSRugR)
+Perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction.  
+### ClipCap/Generate Captions For Memes.ipynb
+Apply a pre-trained image captioning model [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) to generate textual description of clean images. The generated captions will be saved as clipcap_caption.csv file for the next step of the experiment.
+### ClipCap/CLIP Model.ipynb
+Integrate image captioning features from clipcap_caption.csv as additional textual inputs of the CLIP model for hateful memes classification.
