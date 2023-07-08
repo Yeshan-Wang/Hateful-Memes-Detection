@@ -52,7 +52,6 @@ The folder contains the complete experiments for replacing the underlying text e
 | ------------ | ---------------- | ---------- | ------------- |
 | [RoBERTa-Large](https://huggingface.co/roberta-large) | 76.62 | 80.92 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1vd3M0wQct6gG8qhQ7O5uSa7f3WaeWBGV) |
 | [Twitter-RoBERTa-base-offensive](https://huggingface.co/cardiffnlp/twitter-roberta-base-offensive) | 78.02 | 82.11 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Vi6nKfbU5f5cNj_AZhQrml5JiM71U6BE) |
-| CLIP | 81.13 | 83.81 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
 
 It is not difficult to see that replacing the underlying text encoder of the CLIP model with RoBERTa-Large will lead to a decrease in the classification performance of the CLIP model. Although the RoBERTa-base model trained and fine-tuned on specific domains outperforms RoBERTa-Large model, it is still not enough to compete with the original text encoder of CLIP.
 
@@ -72,10 +71,9 @@ The test score of AUROC showed that the CLIP model can be improved by applying t
 | CLIP | 81.13 | 83.81 |
 
 ## 5. Feature Extraction by Image Captioning
-This folder contains the following subfiles:  
-### Image Processing/Remove Text from Memes.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YaXmEBI2MPxAS7B6EoqdLVjgfxpSRugR)
-Perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction.  
-### ClipCap/Generate Captions For Memes.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bVsNv_ADrtlCfnc9wpVL5joL0p_wPmdX)
-Apply a pre-trained image captioning model [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) to generate textual description of clean images. The generated captions will be saved as clipcap_caption.csv file for the next step of the experiment.
-### ClipCap/CLIP Model.ipynb  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1yYIhO56aCxguqiNHQ2Axujsw-CygsBvo)
-Integrate image captioning features from clipcap_caption.csv as additional textual inputs of the CLIP model for hateful memes classification.
+The folder contains the complete experiments for feature extraction by image captioning. Firstly, we perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction. Then we apply different pre-trained image captioning models ([ClipCap](https://github.com/rmokady/CLIP_prefix_caption) and [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-large) ) to generate textual description of clean images. The generated captions will be saved as corresponding CSV file for integrating image captioning features as additional textual inputs of the CLIP model for hateful memes classification.
+
+| Image Captioning Model | Generated Captions | Validation AUROC | Test AUROC |  Colab Links  |
+| ---------------------- | ------------------ | ---------------- | ---------- | ------------- |
+| [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) | clipcap_caption.csv | 79.7 | 80.97 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1yYIhO56aCxguqiNHQ2Axujsw-CygsBvo) |
+| [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-large) | BLIP_caption.csv | 81.65 | 82.14 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17-GtNCnQoXtCIvyfexCj_fOlokKYRlOy) |
