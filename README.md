@@ -38,7 +38,7 @@ The folder contains the following four notebooks corresponding to the complete e
  
 | Model Version  | Validation AUROC | Test AUROC |  Model Size  |  Colab Links  |
 | -------------- | ---------------- | ---------- | ------------ | ------------- |
-| ViT-L/14@336px |      81.13       |   83.81    |    891MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NkA8TdIsofMHFJIXI-n6Ab3p1lVwr1It) |
+| ViT-L/14@336px |      81.13       |   83.81    |    891MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1I_4F593MJD_YVDxqwnbPKqU2h_ntLW6g) |
 |    ViT-L/14    |      81.62       |   82.41    |    890MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IEwz53Dn4qmE3R3WngCtYyIKzOPX77JG) |
 |    ViT-B/16    |      74.29       |   79.94    |    335MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1MzbgFUcyMI_zrtFwCWVTfbVXFOV3cHxM) |
 |    ViT-B/32    |      73.04       |   76.89    |    338MB     | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1js683AnC-r0dlxn7khlDZV7C6rclCOhN) |
