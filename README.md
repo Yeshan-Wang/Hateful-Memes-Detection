@@ -57,7 +57,7 @@ The folder contains the complete experiments for replacing the underlying text e
 It is not difficult to see that replacing the underlying text encoder of the CLIP model with RoBERTa-Large will lead to a decrease in the classification performance of the CLIP model. Although the RoBERTa-base model trained and fine-tuned on specific domains outperforms RoBERTa-Large model, it is still not enough to compete with the original text encoder of CLIP.
 
 ## 4. Feature Extraction by Image Captioning
-The folder contains the complete experiments for feature extraction by image captioning. Firstly, we perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction. Then we apply pre-trained image captioning model [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-large) ) to generate textual description of clean images. The generated captions will be saved as corresponding CSV file for integrating image captioning features as additional textual inputs of the CLIP model for hateful memes classification. However, the results show that the generated captioning features do not help the CLIP model to improve its performance:
+The folder contains the complete experiments for feature extraction by image captioning. Firstly, we perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction. Then we apply pre-trained image captioning model [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-large) to generate textual description of clean images. The generated captions will be saved as corresponding CSV file for integrating image captioning features as additional textual inputs of the CLIP model for hateful memes classification. However, the results show that the generated captioning features do not help the CLIP model to improve its performance:
 
 | Image Captioning Model | Generated Captions | Validation AUROC | Test AUROC |  Colab Links  |
 | ---------------------- | ------------------ | ---------------- | ---------- | ------------- |
@@ -69,7 +69,7 @@ We then tried to apply another pre-trained image captioning model [BLIP-2](https
 
 | Image Captioning Model | Generated Captions | Validation AUROC | Test AUROC |  Colab Links  |
 | ---------------------- | ------------------ | ---------------- | ---------- | ------------- |
-| [BLIP-2](https://huggingface.co/Salesforce/blip2-opt-2.7b-coco) | [BLIP_2_caption.csv]() | 81.79 | 82.74 | [![Open In Colab](https://colab.research.google.com/drive/17-GtNCnQoXtCIvyfexCj_fOlokKYRlOy) |
+| [BLIP-2](https://huggingface.co/Salesforce/blip2-opt-2.7b-coco) | [BLIP_2_caption.csv]() | 81.79 | 82.74 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17-GtNCnQoXtCIvyfexCj_fOlokKYRlOy) |
 
 ## 5. Hyperparameter optimization + Ensemble Learning
 The folder contains the complete experiments for hyper-parameters tuning over the dropout rate, learning rate, activation function, optimizer and scheduler type and save all best performing models based on the validation AUROC score. We then perform soft voting method for ensemble learning by averaging the predictions of best performing models. The AUROC score showed that the CLIP model can be improved by applying this strategy.
