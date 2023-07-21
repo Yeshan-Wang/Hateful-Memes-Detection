@@ -54,7 +54,7 @@ The folder contains the complete experiments for replacing the underlying text e
 | [Twitter-RoBERTa-base-offensive](https://huggingface.co/cardiffnlp/twitter-roberta-base-offensive) | 78.47 | 81.33 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Vi6nKfbU5f5cNj_AZhQrml5JiM71U6BE) |
 | CLIP baseline | 81.59 | 81.98 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1nbQwAKPVymAGFfOJL-8DtlfUl5V2R5KB) |
 
-It is not difficult to see that replacing the underlying text encoder of the CLIP model with RoBERTa-Large will lead to a decrease in the classification performance of the CLIP model. Although the RoBERTa-base model trained and fine-tuned on specific domains outperforms RoBERTa-Large model, it is still not enough to compete with the original text encoder of CLIP.
+It is not difficult to see that replacing the underlying text encoder of the CLIP model with RoBERTa-Large will lead to a decrease in the classification performance of the CLIP model. Although the RoBERTa-base model trained and fine-tuned on specific domains outperforms RoBERTa-Large model, it is still not enough to compete with the original text encoder of CLIP. This may be due to the fact that CLIP and RoBERTa are pre-trained using different objectives. CLIP is trained using a contrastive objective to learn image-text matching, while RoBERTa is pretrained on a range of language tasks. This difference in training objectives could lead to a mismatch when combining the two models, affecting their ability to jointly represent images and text effectively.  
 
 ## 4. Feature Extraction by Image Captioning
 The folder contains the complete experiments for feature extraction by image captioning. Firstly, we perform data pre-processing to detect and remove texts from meme images and save the clean images for feature extraction. Then we apply pre-trained image captioning model [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-large) to generate textual description of clean images. The generated captions will be saved as corresponding CSV file for integrating image captioning features as additional textual inputs of the CLIP model for hateful memes classification. However, the results show that the generated captioning features do not help the CLIP model to improve its performance:
@@ -72,8 +72,20 @@ We then tried to apply another pre-trained image captioning model [BLIP-2](https
 | [BLIP-2](https://huggingface.co/Salesforce/blip2-opt-2.7b-coco) | [BLIP_2_caption.csv](https://github.com/Yeshan-Wang/Hateful-Memes-Detection/blob/main/4.%20Feature%20Extraction%20by%20Image%20Captioning/BLIP-2/BLIP_2_caption.csv) | 81.79 | 82.74 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/17-GtNCnQoXtCIvyfexCj_fOlokKYRlOy) |
 
 ## 5. Hyperparameter optimization + Ensemble Learning
-The folder contains the complete experiments for hyper-parameters tuning over the dropout rate, learning rate, activation function, optimizer and scheduler type and save all best performing models based on the validation AUROC score. We then perform soft voting method for ensemble learning by averaging the predictions of best performing models. The AUROC score showed that the CLIP model can be improved by applying this strategy.
+The folder contains the complete experiments based on the CLIP model with captioning features for hyper-parameters tuning over the dropout rate, learning rate, activation function, optimizer and scheduler type and save all best performing models based on the validation AUROC score. We then perform soft voting method for ensemble learning by averaging the predictions of best performing models. The AUROC score showed that the CLIP model with captioning features can be improved by applying this strategy.
 
 | Hyperparameter Optimization | Validation AUROC | Test AUROC |  Colab Links  |
 | ------------ | ---------------- | ---------- | ------------- |
 | Ensemble Learning | 83.46 | 83.23 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WaNIYdm4jZEREKp3u_XWZyRKYDX-XAux) |
+
+## 6. Error Analysis
+The folder contains the error analysis of predicted results from three different models:
+- [CLIP baseline model](https://github.com/Yeshan-Wang/Hateful-Memes-Detection/blob/main/6.%20Error%20Analysis/CLIP_baseline.csv)
+- [CLIP model with captioning features](https://github.com/Yeshan-Wang/Hateful-Memes-Detection/blob/main/6.%20Error%20Analysis/CLIP_caption.csv)
+- [Ensemble model after hyperparameter optimization](https://github.com/Yeshan-Wang/Hateful-Memes-Detection/blob/main/6.%20Error%20Analysis/CLIP_ensemble.csv)
+  
+For each model, we show its confusion matrix separately, as well as the corresponding error cases (False Positive, False Negative). We also compare some classification results between different models, such as:
+- True Positive cases identified by CLIP model with captioning features but not identified by CLIP baseline model
+- True Positive cases identified by ensemble model but not identified by CLIP model with captioning features
+
+All of the above analysis can be found in [Error Analysis.ipynb](https://github.com/Yeshan-Wang/Hateful-Memes-Detection/blob/main/6.%20Error%20Analysis/Error%20Analysis.ipynb)
